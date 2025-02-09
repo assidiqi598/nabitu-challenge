@@ -6,8 +6,7 @@ export default function AddInvoicePage() {
     <Container maxWidth="sm" className="bg-gray-200">
       <Typography
         variant="h4"
-        component="h1"
-        sx={{ fontFamily: "Arial", marginTop: "2rem", marginBottom: "2rem" }}
+        sx={{ fontFamily: "Arial", marginTop: "2rem", marginBottom: "2rem", fontWeight: "bold" }}
       >
         Add Invoice
       </Typography>
