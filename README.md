@@ -1,6 +1,6 @@
 # Invoice Management System
 
-A simple invoice management system built using **Next.js 14**, **React Hook Form**, **Zod validation**, **MUI components**, and **TypeScript**.
+A simple invoice management system built using **Next.js 14+**, **React Hook Form**, **Zod validation**, **MUI components**, and **TypeScript**.
 
 ## Features
 
@@ -12,7 +12,7 @@ A simple invoice management system built using **Next.js 14**, **React Hook Form
 
 ## Tech Stack
 
-- **Next.js 14** – For server-side rendering (SSR) and API routes
+- **Next.js 14+** – For server-side rendering (SSR) and API routes
 - **React Hook Form** – Efficient form handling
 - **Zod** – Schema validation
 - **MUI (Material UI)** – Modern UI components
