@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Internet Subscription",
+    "invoiceNumber": "INV202501",
+    "dueDate": "2025-01-13",
+    "amount": 582901,
+    "status": "Paid"
+  },
+  {
+    "name": "Electricity Bill",
+    "invoiceNumber": "INV202502",
+    "dueDate": "2025-02-04",
+    "amount": 311909,
+    "status": "Paid"
+  },
+  {
+    "name": "Gym Membership",
+    "invoiceNumber": "INV202503",
+    "dueDate": "2025-02-23",
+    "amount": 425000,
+    "status": "Unpaid"
+  },
+  {
+    "name": "Phone Bill",
+    "invoiceNumber": "INV202504",
+    "dueDate": "2025-02-23",
+    "amount": 148891,
+    "status": "Pending"
+  }
+]

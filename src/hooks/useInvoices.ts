@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Invoice } from "@/lib/types/invoice";
 
 // Local Storage Key
@@ -8,22 +8,26 @@ const STORAGE_KEY = "invoices_data";
 
 export default function useInvoices() {
   const [invoices, setInvoices] = useState<Invoice[]>([]);
+  const isMounted = useRef(false);
 
-  // Load invoices from localStorage on mount
   useEffect(() => {
-    const storedInvoices =
-      localStorage.getItem(STORAGE_KEY);
+    const storedInvoices = localStorage.getItem(STORAGE_KEY);
     if (storedInvoices) {
-      setInvoices(JSON.parse(storedInvoices));
+      if (!isMounted.current) setInvoices(JSON.parse(storedInvoices));
+    } else {
+      fetch("/api/invoices")
+        .then((res) => res.json())
+        .then((data: Invoice[]) => {
+          setInvoices(data);
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+        })
+        .catch((err) => console.error("Failed to fetch invoices:", err));
     }
+    isMounted.current = true;
   }, []);
 
-  // Save invoices to localStorage whenever they change
   useEffect(() => {
-    localStorage.setItem(
-      STORAGE_KEY,
-      JSON.stringify(invoices)
-    );
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(invoices));
   }, [invoices]);
 
   // Function to add an invoice
@@ -33,23 +37,14 @@ export default function useInvoices() {
 
   // Function to delete an invoice
   const deleteInvoice = (invoiceNumber: string) => {
-    setInvoices((prev) =>
-      prev.filter(
-        (invoice) => invoice.invoiceNumber !== invoiceNumber
-      )
-    );
+    setInvoices((prev) => prev.filter((invoice) => invoice.invoiceNumber !== invoiceNumber));
   };
 
   // Function to edit/update an invoice
-  const updateInvoice = (
-    invoiceNumber: string,
-    updatedInvoice: Partial<Invoice>
-  ) => {
+  const updateInvoice = (invoiceNumber: string, updatedInvoice: Partial<Invoice>) => {
     setInvoices((prev) =>
       prev.map((invoice) =>
-        invoice.invoiceNumber === invoiceNumber
-          ? { ...invoice, ...updatedInvoice }
-          : invoice
+        invoice.invoiceNumber === invoiceNumber ? { ...invoice, ...updatedInvoice } : invoice
       )
     );
   };

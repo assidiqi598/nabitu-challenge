@@ -8,7 +8,7 @@ export default function AddInvoicePage() {
         variant="h4"
         sx={{ fontFamily: "Arial", marginBottom: "2rem", fontWeight: "bold" }}
       >
-        Add Invoice
+        Edit Invoice
       </Typography>
       <InvoiceForm />
     </Container>
