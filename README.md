@@ -64,17 +64,17 @@ Before you begin, ensure you have the following installed:
 ### Adding an Invoice
 
 - Fill in the form fields.
-- Click **"Save Invoice"**.
+- Click **"+Add Invoice"**.
 - Invoice gets saved locally and appears in the table.
 
 ### Editing an Invoice
 
-- Click the **Edit** button next to an invoice.
+- Click the **Edit** icon after opening action menu.
 - Modify the values and save.
 
 ### Deleting an Invoice
 
-- Click the **Delete** button to remove an invoice.
+- Click the **Delete** icon after opening action menu.
 
 ---
 
