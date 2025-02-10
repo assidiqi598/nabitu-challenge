@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Invoice Management System
 
-## Getting Started
+A simple invoice management system built using **Next.js 14**, **React Hook Form**, **Zod validation**, **MUI components**, and **TypeScript**.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+✅ Create, edit, and delete invoices  
+✅ Form validation using **React Hook Form** & **Zod**  
+✅ Material UI components for a sleek UI  
+✅ Local storage persistence  
+✅ Sticky table header with scrollable body
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js 14** – For server-side rendering (SSR) and API routes
+- **React Hook Form** – Efficient form handling
+- **Zod** – Schema validation
+- **MUI (Material UI)** – Modern UI components
+- **TypeScript** – Strongly typed JavaScript
+- **Local Storage** – Persist invoices
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Prerequisites
 
-To learn more about Next.js, take a look at the following resources:
+Before you begin, ensure you have the following installed:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Node.js (latest LTS version recommended)** – Download from [nodejs.org](https://nodejs.org/)
+- **npm or yarn** – Installed along with Node.js
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Installation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Clone the repository:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```sh
+   git clone https://github.com/assidiqi598/nabitu-challenge.git
+   cd nabitu-challenge
+   ```
+
+2. Install dependencies:
+
+   ```sh
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Run the development server:
+
+   ```sh
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## Usage
+
+### Adding an Invoice
+
+- Fill in the form fields.
+- Click **"Save Invoice"**.
+- Invoice gets saved locally and appears in the table.
+
+### Editing an Invoice
+
+- Click the **Edit** button next to an invoice.
+- Modify the values and save.
+
+### Deleting an Invoice
+
+- Click the **Delete** button to remove an invoice.
+
+---
+
+## License
+
+📜 MIT License
